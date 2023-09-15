@@ -49,3 +49,28 @@ body {
     color: #ff0000;
   }
   
+  @keyframes changeColor {
+    0% {
+      color: #0b1469; /* Cor inicial */
+    }
+    50% {
+      color: #4057d8; /* Cor no meio da animação */
+    }
+    75% {
+      color: #2583a8; /* Cor final, igual à cor inicial */
+    }
+    100% {
+      color: #0b1469; /* Cor final, igual à cor inicial */
+    }
+  }
+
+  .title {
+    font-size: 36px;
+    color: #0b1469;
+    text-align: center;
+    margin-bottom: 15px;
+    animation: changeColor 3s linear infinite; /* Aplicando a animação de mudança de cor */
+  }
+  
+
+  
