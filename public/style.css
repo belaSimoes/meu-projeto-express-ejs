@@ -42,7 +42,7 @@ body {
   background-color: #0032a0; /* Cor de fundo azul mais escura no hover */
   color: #fff;
 }
-
+ 
 .navbar a:active {
   background-color: #001a6c; /* Cor de fundo azul ainda mais escura quando clicado */
 }
