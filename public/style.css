@@ -1,5 +1,5 @@
 body {
-    background: linear-gradient(to bottom, #98a8fd, #d8d5e6);
+    background: linear-gradient(to bottom, #3ea4e8, #d8d5e6);
     margin: 0;
     padding: 0;
     display: flex;
@@ -46,6 +46,51 @@ body {
   }
   
   a:hover {
-    color: #ff0000;
+    color: #00b5fc;
   }
-  
+
+
+h1 {
+  font-size: 28px;
+  color: #333;
+  text-align: center;
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+
+p {
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 10px 0;
+}
+
+
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+}
+
+
+.details {
+  font-size: 14px;
+  color: #666;
+  margin-top: 10px;
+}
+
+
+.palmilha {
+  font-weight: bold;
+  color: #00f;
+  margin-top: 10px;
+}
+/* Estilo para a imagem */
+img {
+  display: block;
+  margin: 0 auto;
+  max-width: 100%;
+  border: 2px solid #59e5f4; /* Adiciona uma borda de 2px sólida com cor cinza */
+  box-shadow: 3px 3px 5px #888; /* Adiciona uma sombra */
+  border-radius: 8px; /* Adiciona bordas arredondadas */
+}
