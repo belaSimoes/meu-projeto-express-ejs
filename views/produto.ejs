@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Detalhes do Produto</title>
+  <link rel="stylesheet" type="text/css" href="/style.css">
+</head>
+<body>
+  <nav class="navbar">
+    <img src="/logo.png" alt="Logo" class="navbar-logo">
+    <a href="/">Página Inicial</a>
+  </nav>      
+
+  <div class="product-details">
+    <h1 class="title"><%= produto.productName %></h1>
+    <img src="<%= produto.imagePath %>" alt="Imagem do Produto">
+    <div class="product-description">
+      <p><%= produto.productDescription %></p>
+    </div>
+    <p><%= produto.productPrice %></p>
+  </div>
+</body>
+</html>
