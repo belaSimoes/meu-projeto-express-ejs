@@ -29,6 +29,8 @@ const produtos = [
   }
 ];
 
+
+
 app.get('/', (req, res) => {
   res.render('index', { produtos });
 });
