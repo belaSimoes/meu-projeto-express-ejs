@@ -12,12 +12,13 @@
     <% for (let produto of produtos) { %>
     <li>
       <a href="/produto?id=1"> <!-- Adicione ?id=1 para o primeiro produto -->
-        <h2><% produtos.productName %></h2>
-        <img src="/imagem_produto1.png" alt="Imagem do Produto 1">
-        <p>R$ 79,99</p>
+        <h2><%= produto.productName %></h2>
+        <img src="<%= produto.imagePath %>" alt="Imagem do Produto 1">
+        <p><%= produto.productPrice %></p>
       </a>
     </li>
     <% } %>
+    
   </ul>
  
 </body>
