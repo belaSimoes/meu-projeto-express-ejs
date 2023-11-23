@@ -35,17 +35,14 @@ app.get('/', (req, res) => {
   res.render('index', { produtos });
 });
 
-app.get('/produto', (req, res) => {
-  const produtoId = req.query.id;
+for (let produto of produtos) {
+  console.log(produto.id);
+}
 
-  const produto = produtos.find(prod => prod.id === Number(produtoId));
-
-  if (produto) {
-    res.render('produto', { produto });
-  } else {
-    res.send('Produto não encontrado');
-  }
-});
+function buscarProdutoPorId (){
+  const produto = produtos.find(produto => produto.id == id);
+  return produto || null 
+}
 
 app.listen(port, () => {
   console.log(`Servidor rodando em http://localhost:${port}`);

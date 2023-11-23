@@ -9,28 +9,16 @@
   <h6 class="titleb">Quentin Tarantino</h6>
 
   <ul>
+    <% for (let produto of produtos) { %>
     <li>
       <a href="/produto?id=1"> <!-- Adicione ?id=1 para o primeiro produto -->
-        <h2>Pulp Fiction</h2>
+        <h2><% produtos.productName %></h2>
         <img src="/imagem_produto1.png" alt="Imagem do Produto 1">
         <p>R$ 79,99</p>
       </a>
     </li>
-    <li>
-      <a href="/produto?id=2"> <!-- Adicione ?id=2 para o segundo produto -->
-        <h2>Inglourious Basterds</h2>
-        <img src="/imagem_produto2.png" alt="Imagem do Produto 2">
-        <p>R$ 99,99</p>
-      </a>
-    </li>
-    <li>
-      <a href="/produto?id=3"> <!-- Adicione ?id=3 para o terceiro produto -->
-        <h2>Kill Bill</h2>
-        <img src="/imagem_produto3.png" alt="Imagem do Produto 3">
-        <p>R$ 89,99</p>
-      </a>
-    </li>
+    <% } %>
   </ul>
-  //<% for (let produto of produtos)%>
+ 
 </body>
 </html>
