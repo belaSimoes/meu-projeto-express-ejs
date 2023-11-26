@@ -9,16 +9,15 @@
   <h6 class="titleb">Quentin Tarantino</h6>
 
   <ul>
-    <% for (let produto of produtos) { %>
+    <% produtos.forEach(produto => { %>
     <li>
-      <a href="/produto?id=1"> <!-- Adicione ?id=1 para o primeiro produto -->
+      <a href="/produto?id=<%= produto.id %>">
         <h2><%= produto.productName %></h2>
-        <img src="<%= produto.imagePath %>" alt="Imagem do Produto 1">
+        <img src="<%= produto.imagePath %>" alt="Imagem do Produto">
         <p><%= produto.productPrice %></p>
       </a>
     </li>
-    <% } %>
-    
+    <% }) %>
   </ul>
  
 </body>

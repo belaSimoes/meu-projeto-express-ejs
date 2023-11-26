@@ -29,19 +29,23 @@ const produtos = [
   }
 ];
 
-
-
 app.get('/', (req, res) => {
   res.render('index', { produtos });
 });
 
-for (let produto of produtos) {
-  console.log(produto.id);
-}
+app.get('/produto', (req, res) => {
+  const id = req.query.id; // Pega o ID do parâmetro da URL
+  const produto = buscarProdutoPorId(id); // Busca o produto pelo ID
+  if (produto) {
+    res.render('produto', { produto }); // Renderiza a página do produto com os detalhes
+  } else {
+    res.status(404).send('Produto não encontrado'); // Se o produto não for encontrado, retorna um erro 404
+  }
+});
 
-function buscarProdutoPorId (){
-  const produto = produtos.find(produto => produto.id == id);
-  return produto || null 
+// Função para buscar o produto por ID
+function buscarProdutoPorId(id) {
+  return produtos.find(produto => produto.id == id);
 }
 
 app.listen(port, () => {
