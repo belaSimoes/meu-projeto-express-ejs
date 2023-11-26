@@ -7,9 +7,10 @@
 <body>
   <nav class="navbar">
     <img src="/logo.png" alt="Logo" class="navbar-logo">
-    <a href="/">Página Inicial</a>
+    <a href="/" class="button">Página Inicial</a>
   </nav>      
 
+  <div class="content">
   <div class="product-details">
     <h1 class="title"><%= produto.productName %></h1>
     <img src="<%= produto.imagePath %>" alt="Imagem do Produto">
@@ -18,5 +19,6 @@
     </div>
     <p><%= produto.productPrice %></p>
   </div>
+</div>
 </body>
 </html>
