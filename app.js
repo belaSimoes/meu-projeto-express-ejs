@@ -1,9 +1,9 @@
-// Importa o módulo Express e inicializa o aplicativo
+// Importa o Express e inicializa o aplicativo
 const express = require('express');
 const app = express();
 const port = 3000;// Define a porta para o servidor
 
-// Configura o mecanismo de visualização como EJS e define o diretório para arquivos estáticos
+// Configura como EJS e define o diretório para arquivos estáticos
 app.set('view engine', 'ejs');
 app.use(express.static('public'));
 
@@ -26,7 +26,7 @@ const produtos = [
   },
   {
     id: 3,
-    productName: 'Kill Bill',
+    productName: ' Bill',
     imagePath: '/imagem_produto3.png',
     productDescription: 'A ex-assassina conhecida apenas como Noiva acorda de um coma de quatro anos decidida a se vingar de Bill, seu ex-amante e chefe, que tentou matá-la no dia do casamento. Ela está motivada a acertar as contas com cada uma das pessoas envolvidas com a perda da filha, da festa de casamento e dos quatro anos de sua vida. Na jornada, a Noiva é submetida a dores físicas agonizantes ao enfrentar a inescrupulosa gangue de Bill, o Esquadrão Assassino de Víboras Mortais.',
     productPrice: 'R$ 89,99',
@@ -59,18 +59,18 @@ app.get('/', (req, res) => {
   res.render('index', { produtos }); // Renderiza a página index.ejs com a lista de produtos
 });
 
-// Rota para exibir detalhes de um produto específico
+// exibe detalhes de um produto específico (ID)
 app.get('/produto', (req, res) => {
   const id = req.query.id; // Pega o ID do parâmetro da URL
-  const produto = buscarProdutoPorId(id); // Busca o produto pelo ID
+  const produtott = buscarProdutoPorId(id); // Busca pelo ID
   if (produto) {
-    res.render('produto', { produto }); // Renderiza a página do produto com os detalhes
+    res.render('produto', { produtott }); // Renderiza a página do produto com os detalhes
   } else {
-    res.status(404).send('Produto não encontrado'); // Se o produto não for encontrado, retorna um erro 404
+    res.status(404).send('não encontrado'); // Se o produto não for encontrado, retorna um erro 404
   }
 });
 
-// Função para buscar o produto por ID
+// buscar o produto por ID
 function buscarProdutoPorId(id) {
   return produtos.find(produto => produto.id == id);// Encontra o produto com base no ID fornecido
 }
